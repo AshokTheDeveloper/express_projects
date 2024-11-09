@@ -1,0 +1,41 @@
+GET http://localhost:3000/users/
+
+###
+GET http://localhost:3000/users/get-users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFzaG9rIiwiaWF0IjoxNzMxMTYxODI5fQ.uOooYZ-exaaPSCAoSazkeQK1_PlhXgWkiIolRgu3jSk
+
+###
+GET http://localhost:3000/users/get-user/?search_q=Ashok
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFzaG9rIiwiaWF0IjoxNzMxMTYxODI5fQ.uOooYZ-exaaPSCAoSazkeQK1_PlhXgWkiIolRgu3jSk
+
+###
+DELETE  http://localhost:3000/users/delete-user/?search_q=samantha
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1vcmdhbiIsImlhdCI6MTczMTE2MjM5MH0.O285bWhKD8Yqetj2B4ij_tprnRBZmfw5DOJhRLAjOew
+
+
+###
+POST http://localhost:3000/users/signup
+Content-Type: application/json
+
+{
+    "name": "Ashok",
+    "gender": "male",
+    "password": "123456",
+    "email": "ashok@gmail.com"
+}
+
+###
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+    "name": "Raj",
+    "password": "123456"
+}
+
+###
+PUT http://localhost:3000/users/update-user/?
+
+###
+GET http://localhost:3000/users/user-profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlJhaiIsImlhdCI6MTczMTE2MjgyOX0.XHjL3lRPNwaHHWcyOKGdRdoZ2q_v1hrQaCOG5gYvDN8

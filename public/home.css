@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.bg-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: indigo;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 80px;
+  font-family: Arial;
+}
+
+
+
