@@ -1,5 +1,4 @@
 const jwt = require("jsonwebtoken");
-const KEY = process.env.SECRETE_KEY;
 
 const authenticateUser = (req, res, next) => {
   const authHeader = req.headers["authorization"];
@@ -10,7 +9,8 @@ const authenticateUser = (req, res, next) => {
   if (authHeader === undefined) {
     res.status(401).send("Invalid JWT Token");
   } else {
-    jwt.verify(jwtToken, KEY, async (error, payload) => {
+    const KEY = process.env.SECRETE_KEY;
+    jwt.verify(jwtToken, KEY, (error, payload) => {
       if (error) {
         res.status(401).send("Invalid JWT Token");
       } else {
